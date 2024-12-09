@@ -1,0 +1,31 @@
+package Facturar;
+
+public class SistemaFacturacion {
+    public static void main(String[] args) {
+        // Crear Empresa
+        Empresa empresa = new Empresa("Henry Borja", "0250009107");
+
+        // Crear Cliente
+        Cliente cliente = new Cliente("Karla Zamora", "1725122904", "karlitalimo21@gmail.com");
+
+        // Crear Productos
+        Producto producto1 = new Producto("0012", "Plancha de cabello", 5.0);
+        Producto producto2 = new Producto("0055", "Waflera", 25.0);
+
+        // Crear Detalles de Factura
+        DetalleFactura detalle1 = new DetalleFactura(producto1, 1);
+        DetalleFactura detalle2 = new DetalleFactura(producto2, 2);
+
+        // Crear Factura
+        Factura factura = new Factura("07/12/2024", "F0001");
+        factura.agregarDetalle(detalle1);
+        factura.agregarDetalle(detalle2);
+
+        // Mostrar Factura
+        factura.mostrarFactura();
+
+        // Operaciones adicionales
+        empresa.gestionarClientes();
+        cliente.realizarPedido();
+    }
+}

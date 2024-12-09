@@ -1,0 +1,16 @@
+package Facturar;
+
+
+public class Empresa {
+    private String nombre;
+    private String ruc;
+
+    public Empresa(String nombre, String ruc) {
+        this.nombre = nombre;
+        this.ruc = ruc;
+    }
+
+    public void gestionarClientes() {
+        System.out.println("La empresa " + nombre + " (RUC: " + ruc + ") está gestionando clientes.");
+    }
+}

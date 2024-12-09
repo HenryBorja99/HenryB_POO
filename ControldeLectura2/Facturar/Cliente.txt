@@ -1,0 +1,17 @@
+package Facturar;
+
+public class Cliente {
+    private String nombre;
+    private String ruc;
+    private String correo;
+
+    public Cliente(String nombre, String ruc, String correo) {
+        this.nombre = nombre;
+        this.ruc = ruc;
+        this.correo = correo;
+    }
+
+    public void realizarPedido() {
+        System.out.println("Cliente " + nombre + " (RUC: " + ruc + ", Correo: " + correo + ") esta realizando un pedido.");
+    }
+}

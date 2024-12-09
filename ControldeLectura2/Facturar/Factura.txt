@@ -1,0 +1,33 @@
+package Facturar;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Factura {
+    private String fechaEmision;
+    private String numero;
+    private List<DetalleFactura> detalles;
+
+    public Factura(String fechaEmision, String numero) {
+        this.fechaEmision = fechaEmision;
+        this.numero = numero;
+        this.detalles = new ArrayList<>();
+    }
+
+    public void agregarDetalle(DetalleFactura detalle) {
+        detalles.add(detalle);
+    }
+
+    public void mostrarFactura() {
+        System.out.println("Factura Nº: " + numero);
+        System.out.println("Fecha de Emisión: " + fechaEmision);
+        double total = 0;
+        for (DetalleFactura detalle : detalles) {
+            System.out.print("- Producto: " + detalle.getProducto().getDescripcion());
+            System.out.print(" | Cantidad: " + detalle.getCantidad());
+            System.out.println(" | Subtotal: $" + detalle.calcularSubtotal());
+            total += detalle.calcularSubtotal();
+        }
+        System.out.println("Total: $" + total);
+    }
+}
