@@ -1,0 +1,32 @@
+public class Tarea {
+    private String nombre;
+    private String descripcion;
+    private String estado;
+
+    public Tarea(String nombre, String descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.estado = "Pendiente"; 
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void cambiarEstado(String nuevoEstado) {
+        this.estado = nuevoEstado;
+    }
+
+    @Override
+    public String toString() {
+        return "Tarea: " + nombre + ", Descripción: " + descripcion + ", Estado: " + estado;
+    }
+}

@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class GestorDeProyectos {
+    private List<Proyecto> proyectos;
+
+    public GestorDeProyectos() {
+        proyectos = new ArrayList<>();
+    }
+
+    public void registrarProyecto(Proyecto proyecto) {
+        proyectos.add(proyecto);
+    }
+
+    public void mostrarProyectos() {
+        for (Proyecto proyecto : proyectos) {
+            proyecto.mostrarEstado();
+            System.out.println();
+        }
+    }
+}

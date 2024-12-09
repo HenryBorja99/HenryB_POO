@@ -1,0 +1,24 @@
+public class Main {
+    public static void main(String[] args) {
+        GestorDeProyectos gestor = new GestorDeProyectos();
+
+       
+        Proyecto proyecto1 = new Proyecto("Desarrollo de Software", "Proyecto para desarrollar una aplicación de gestión.");
+        proyecto1.agregarTarea(new Tarea("Análisis de requisitos", "Reunir y analizar los requisitos del cliente."));
+        proyecto1.agregarTarea(new Tarea("Diseño de la arquitectura", "Diseñar la arquitectura del sistema."));
+
+        
+        gestor.registrarProyecto(proyecto1);
+
+        
+        Proyecto proyecto2 = new Proyecto("Marketing Digital", "Proyecto para implementar una estrategia de marketing digital.");
+        proyecto2.agregarTarea(new Tarea("Investigación de mercado", "Investigar el mercado objetivo."));
+        proyecto2.agregarTarea(new Tarea("Crear contenido", "Desarrollar contenido para redes sociales."));
+
+       
+        gestor.registrarProyecto(proyecto2);
+
+       
+        gestor.mostrarProyectos();
+    }
+}
